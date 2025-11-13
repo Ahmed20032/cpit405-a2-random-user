@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Random User – CPIT-405 A2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Random User <span class="badge">CPIT‑405</span></h1>
+      <p class="sub">Fetch API + Simple Interaction (Button / Filters)</p>
+    </header>
+
+    <main class="container">
+      <section class="controls">
+        <label>
+          Gender:
+          <select id="gender">
+            <option value="">Any</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>
+        </label>
+
+        <label>
+          Nationality (optional):
+          <select id="nat">
+            <option value="">Any</option>
+            <option value="US">US</option>
+            <option value="GB">GB</option>
+            <option value="FR">FR</option>
+            <option value="DE">DE</option>
+            <option value="AU">AU</option>
+            <option value="CA">CA</option>
+            <option value="BR">BR</option>
+            <option value="TR">TR</option>
+            <option value="SA">SA</option>
+          </select>
+        </label>
+
+        <button id="generate">Generate User</button>
+      </section>
+
+      <section id="status" role="status" aria-live="polite" class="status"></section>
+
+      <section id="card" class="card hidden" aria-hidden="true">
+        <div class="avatar-wrap">
+          <img id="avatar" alt="User avatar" />
+        </div>
+        <div class="info">
+          <h2 id="name"></h2>
+          <p><strong>Email:</strong> <a id="email" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+          <p><strong>Phone:</strong> <span id="phone"></span></p>
+          <p><strong>Location:</strong> <span id="location"></span></p>
+          <p><strong>Age:</strong> <span id="age"></span></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container foot">
+      <p>API: <a href="https://randomuser.me/api" target="_blank" rel="noopener noreferrer">randomuser.me</a> | Built with <code>fetch()</code></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
